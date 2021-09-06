@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from '../UI/Card';
+import MealItem from './MealItem/MealItem';
 import './AvailableMeals.css';
 
 const AvailableMeals = () =>{
@@ -28,14 +30,16 @@ const AvailableMeals = () =>{
           price: 18.99,
         },
       ];
-    const mealsList = DUMMY_MEALS.map(meal=><li>{meal.name}</li>)
+    const mealsList = DUMMY_MEALS.map(meal=><MealItem id={meal.id} key={meal.id} name={meal.name} description={meal.description} price={meal.price}/>)
     return(
         <div className="meals">
+            <Card>
             <ul>
                 {
                     mealsList
                 }
             </ul>
+            </Card>
         </div>
     );
 }
