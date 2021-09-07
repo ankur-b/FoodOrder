@@ -2,7 +2,7 @@ import React from 'react';
 import CartButton from './CartButton';
 import mealsImg from '../../Assets/meals.jpg';
 import './Header.css'
-const Header = (props) =>{
+const Header = (props ) =>{
     return(
         <>
         <header className="header">
